@@ -21,14 +21,32 @@
             display: flex;
             justify-content: center;
             align-content: center;
+            position: relative;     /* Essential: This creates the boundary wall for the image */
+            padding-top: 40px
+        }
+        .profile_pic{
+            position: absolute;     /* Unlocks free movement inside the parent box */
+            top: 15px;              /* Sets distance from the top edge */
+            right: 15px;            /* Sets distance from the right edge */
+            width: 200px;           /* Your 2x2 layout width */
+            height: 200px;
+        }
+        .details{
+            position: absolute;     /* Unlocks free movement inside the parent box */
+            top: 15px;              /* Sets distance from the top edge */
+            left: 15px;
         }
     </style>
 </head>
 <body>
     ><div class="resume-container">
-        <div id="photo-placeholder">
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/030/504/836/small/avatar-account-flat-isolated-on-transparent-background-for-graphic-and-web-design-default-social-media-profile-photo-symbol-profile-and-people-silhouette-user-icon-vector.jpg" alt="profile">
+        <div class="pic-placeholder">
+            <img class="profile_pic" src="https://static.vecteezy.com/system/resources/thumbnails/030/504/836/small/avatar-account-flat-isolated-on-transparent-background-for-graphic-and-web-design-default-social-media-profile-photo-symbol-profile-and-people-silhouette-user-icon-vector.jpg" alt="profile">
 
+        </div>
+        <div class="details">
+            <h1 id="fullname">John David Q, Mancion</h1>
+            <h3 id="email"><a href="mailto:johndavidmancion9@gmail.com">johndavidmancion9@gmail.com</h3>
         </div>
     </div>
 </body>
